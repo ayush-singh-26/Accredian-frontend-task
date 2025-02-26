@@ -12,7 +12,7 @@ const ReferEarnForm = ({ isOpen, setIsOpen }) => {
   const onSubmit = async (data) => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:8000/referal", data);
+      const response = await axios.post("https://accredian-backend-task-fwtg.onrender.com/referal", data);
       console.log("Referral Submitted", response.data);
       toast.success("Referral submitted successfully");
       setIsOpen(false);
